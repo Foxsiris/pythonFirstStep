@@ -34,4 +34,24 @@ print(nums)
 nums.sort(reverse=True)
 print(nums)
 print(len(nums))
-print('My git is work')
+
+#### Работа со списками
+numss = [1, 2, 3, 4, 5]
+for n in nums:
+    print(n)
+
+for z in range(1,12):
+    print(z)
+
+numsWithList = list(range(1,1_000))
+
+
+print(numsWithList)
+
+exampleList = []
+for item in range(1,10):
+    exampleList.append(item**3)
+print(exampleList)
+print(min(exampleList))
+print(max(exampleList))
+print(numsWithList[399:])
