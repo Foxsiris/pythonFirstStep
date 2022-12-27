@@ -55,3 +55,68 @@ print(exampleList)
 print(min(exampleList))
 print(max(exampleList))
 print(numsWithList[399:])
+
+copyList = exampleList[:]
+print(copyList)
+exampleList.append(33)
+copyList.append(22)
+print(copyList)
+print(exampleList)
+
+
+def even_or_odd(number):
+    if number%2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
+
+print(even_or_odd(3))
+
+#inputNum = input('Enter number : ')
+#print(inputNum)
+
+#### Классы
+
+class Animal():
+    def mayy(self):
+        print('Maaaayy')
+class Cat(Animal): # так выглядит наследование выглядит очень круто
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+
+
+
+
+    def showInfo(self):
+        print(f'Your cat name : {self.name} {self.age}')
+
+mycat =  Cat('Max',12)
+myCatTw = Cat('Two',13)
+mycat.showInfo()
+myCatTw.showInfo()
+mycat.mayy()
+
+with open('test.rtf') as file_object:
+    content = file_object.read()
+print(content)
+
+with open('test.rtf','a') as file_object:
+    file_object.write('I love Python laguge it is good')
+
+with open('test.rtf') as file_object:
+    content = file_object.read()
+print(content)
+
+import json
+
+n = [1,2,3,4,5,6,7]
+filename='fisrst.json'
+with open(filename,'w') as f:
+    json.dump(n,f)
+
+filename = 'fisrst.json'
+with open(filename) as f:
+    nz = json.load(f)
+    print(nz)
